@@ -16,6 +16,7 @@ const App = () => {
     setCart([...cart, item]);
   };
 
+  // noinspection GrazieInspection
   return (
     <div className="App">
       <Navigation cart={cart} />

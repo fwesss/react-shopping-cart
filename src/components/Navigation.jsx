@@ -8,7 +8,7 @@ const Navigation = ({ cart }) => (
     <NavLink to="/cart">
       Cart
       {' '}
-      <span>{cart.length}</span>
+      <span aria-label="cart-size">{cart.length}</span>
     </NavLink>
   </div>
 );
