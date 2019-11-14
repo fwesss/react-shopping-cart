@@ -1,5 +1,8 @@
 {
   "name": "shopping-cart",
+  "repository": "https://github.com/fwesss/react-shopping-cart.git",
+  "author": "Westley Feller <feller.westley@gmail.com>",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -31,9 +34,6 @@
       "last 1 safari version"
     ]
   },
-  "repository": "https://github.com/fwesss/react-shopping-cart.git",
-  "author": "Westley Feller <feller.westley@gmail.com>",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/polyfill": "^7.7.0",
