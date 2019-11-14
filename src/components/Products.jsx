@@ -1,30 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 
 // Components
 import Product from './Product';
 
-const Products = ({ addItem, products }) => (
-  <div className="products-container">
-    {products.map((product) => (
-      <Product
-        key={product.id}
-        product={product}
-        addItem={addItem}
-      />
-    ))}
-  </div>
-);
+// Context
+import ProductContext from '../contexts/ProductContext';
 
-Products.propTypes = {
-  addItem: PropTypes.func.isRequired,
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string,
-      title: PropTypes.string,
-      price: PropTypes.number,
-    }),
-  ).isRequired,
+const Products = () => {
+  const { products, addItem } = useContext(ProductContext);
+
+  return (
+    <div className="products-container">
+      {products.map((product) => (
+        <Product
+          key={product.id}
+          product={product}
+          addItem={addItem}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default Products;
