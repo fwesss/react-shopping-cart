@@ -16,7 +16,9 @@ it('renders without crashing', () => {
 });
 
 describe('adding item to cart', () => {
-  const { getAllByText, getByLabelText, getByText, queryByText } = render(
+  const {
+    getAllByText, getByLabelText, getByText, queryByText,
+  } = render(
     <Router>
       <AppWithRouter />
     </Router>,
