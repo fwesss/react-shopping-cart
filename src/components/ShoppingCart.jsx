@@ -1,10 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 
 // Components
 import Item from './ShoppingCartItem';
 
-const ShoppingCart = ({ cart }) => {
+// Context
+import CartContext from '../contexts/CartContext';
+
+const ShoppingCart = () => {
+  const { cart } = useContext(CartContext);
+
   const getCartTotal = () => cart.reduce((acc, value) => acc + value.price, 0).toFixed(2);
 
   return (
@@ -22,17 +26,6 @@ const ShoppingCart = ({ cart }) => {
       </div>
     </div>
   );
-};
-
-ShoppingCart.propTypes = {
-  cart: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      title: PropTypes.string,
-      price: PropTypes.number,
-      image: PropTypes.string,
-    }),
-  ).isRequired,
 };
 
 export default ShoppingCart;
